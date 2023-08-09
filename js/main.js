@@ -11,9 +11,7 @@ jQuery(document).ready(function ($) {
   });
 
   //COUNTDOWN TIMER
-  var newYear = new Date();
-  newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1);
-  $("#countdown").countdown({ until: new Date(2023, 9 - 1, 27) }); // enter event day
+  $("#countdown").countdown({ until: new Date("September 18, 2023 00:00:00") }); // enter event day
 
   $("#removeCountdown").toggle(
     function () {
@@ -22,7 +20,6 @@ jQuery(document).ready(function ($) {
     },
     function () {
       $(this).text("Remove");
-      $("#defaultCountdown").countdown({ until: newYear });
     }
   );
 
