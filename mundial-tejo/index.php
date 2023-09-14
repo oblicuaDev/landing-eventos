@@ -35,7 +35,7 @@
             </div>
         </div>
     </header>
-    <section class="banner" style="background-image: url(img/banner_home.jpg);">
+    <section class="banner" style="background-image: url(img/banner11.jpg);">
         <div class="container">
             <div class="txt">
                 <h1>¿De qué se
@@ -59,17 +59,19 @@
             <h2>¿Cómo se juega?</h2>
             <img src="img/event2.png" alt="imagen evento">
             <p>Consiste en lanzar un disco de metal hacia un objetivo y estallar triángulos que contienen pólvora.</p>
-            <a href="intern.php">Leer más</a>
+            <a href="https://youtu.be/ma1T0IUiLik" target="_blank">Ver más</a>
         </div>
         <div class="events-item">
             <h2>Novedades</h2>
             <img src="img/event3.png" alt="imagen evento">
             <p>Entérate aquí de lo que sucederá en el mundial de tejo 2023.</p>
-            <a href="intern.php">Leer más</a>
+            <a href="intern.php#novedades">Leer más</a>
         </div>
     </section>
     <section class="banner2">
-        <img src="img/banner2_home.jpg" alt="banner 2">
+        <a href="intern.php#novedades">
+            <img src="img/banner2_home.jpeg" alt="banner 2">
+        </a>
     </section>
     <section id="venue">
         <div class="venue">

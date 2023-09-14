@@ -21,9 +21,9 @@
     </div>
 </section>
 <section class="buttons">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4vNc-QZ2TLkYKG1B3-aU2g4DvVOjc1SVSTUfc-c3xK6utnA/viewform" class="link">Inscríbete como Vendedor Turismo de reuniones <strong>21 de Septiembre</strong></a>
-    <a href="https://forms.gle/U6FBtP3xar9kt1cb6" class="link">Inscríbete como Vendedor Vacacional <strong>21 de Septiembre</strong></a>
-    <a href="https://live.eventtia.com/es/ruedadeencadenamiento" class="link">INSCRÍBETE A LA RUEDA DE ENCADENAMIENTO VIRTUAL<strong>7 de Septiembre</strong> <img src="../img/cadena.png" alt="cadena"></a>
+    <a href="javascript:;" class="link disabled">Inscríbete como Vendedor Turismo de reuniones <strong>20 de Septiembre</strong></a>
+    <a href="javascript:;" class="link disabled">Inscríbete como Vendedor Vacacional <strong>20 de Septiembre</strong></a>
+    <a href="agenda-academica" class="link">AGENDA ACADÉMICA</a>
 </section>
 <section class="events">
     <div>

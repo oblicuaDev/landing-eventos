@@ -1,75 +1,5 @@
 @font-face {
-  font-family: "TangoSans";
-  src: url("../fonts/TangoSans.eot");
-  src: url("../fonts/TangoSans.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/TangoSans.woff2") format("woff2"),
-    url("../fonts/TangoSans.woff") format("woff"),
-    url("../fonts/TangoSans.ttf") format("truetype"),
-    url("../fonts/TangoSans.svg#TangoSans") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "TangoSans";
-  src: url("../fonts/TangoSans_BoldItalic.eot");
-  src: url("../fonts/TangoSans_BoldItalic.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/TangoSans_BoldItalic.woff2") format("woff2"),
-    url("../fonts/TangoSans_BoldItalic.woff") format("woff"),
-    url("../fonts/TangoSans_BoldItalic.ttf") format("truetype"),
-    url("../fonts/TangoSans_BoldItalic.svg#TangoSans_BoldItalic") format("svg");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Knucklehead Deco";
-  src: url("../fonts/KnuckleheadDecoRegular.eot");
-  src: url("../fonts/KnuckleheadDecoRegular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/KnuckleheadDecoRegular.woff2") format("woff2"),
-    url("../fonts/KnuckleheadDecoRegular.woff") format("woff"),
-    url("../fonts/KnuckleheadDecoRegular.ttf") format("truetype"),
-    url("../fonts/KnuckleheadDecoRegular.svg#KnuckleheadDecoRegular")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Berlin Sans FB Demi";
-  src: url("../fonts/BerlinSansFBDemi-Bold.eot");
-  src: url("../fonts/BerlinSansFBDemi-Bold.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/BerlinSansFBDemi-Bold.woff2") format("woff2"),
-    url("../fonts/BerlinSansFBDemi-Bold.woff") format("woff"),
-    url("../fonts/BerlinSansFBDemi-Bold.ttf") format("truetype"),
-    url("../fonts/BerlinSansFBDemi-Bold.svg#BerlinSansFBDemi-Bold")
-      format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "TangoSans";
-  src: url("../fonts/TangoSans_Italic.eot");
-  src: url("../fonts/TangoSans_Italic.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/TangoSans_Italic.woff2") format("woff2"),
-    url("../fonts/TangoSans_Italic.woff") format("woff"),
-    url("../fonts/TangoSans_Italic.ttf") format("truetype"),
-    url("../fonts/TangoSans_Italic.svg#TangoSans_Italic") format("svg");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "sinkin_sans200_x_light";
+  font-family: "MuseoSans-300";
   src: url("../fonts/SinkinSans-200XLight-webfont.eot");
   src: url("../fonts/SinkinSans-200XLight-webfont.eot?#iefix")
       format("embedded-opentype"),
@@ -95,19 +25,6 @@
 }
 
 @font-face {
-  font-family: "sinkin_sans400_regular";
-  src: url("../fonts/SinkinSans-400Regular-webfont.eot");
-  src: url("../fonts/SinkinSans-400Regular-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/SinkinSans-400Regular-webfont.woff") format("woff"),
-    url("../fonts/SinkinSans-400Regular-webfont.ttf") format("truetype"),
-    url("../fonts/SinkinSans-400Regular-webfont.svg#sinkin_sans400_regular")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "sinkin_sans600_semibold";
   src: url("../fonts/SinkinSans-600SemiBold-webfont.eot");
   src: url("../fonts/SinkinSans-600SemiBold-webfont.eot?#iefix")
@@ -119,22 +36,37 @@
   font-weight: normal;
   font-style: normal;
 }
-
-@font-face {
-  font-family: "sinkin_sans700_bold";
-  src: url("../fonts/SinkinSans-700Bold-webfont.eot");
-  src: url("../fonts/SinkinSans-700Bold-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/SinkinSans-700Bold-webfont.woff") format("woff"),
-    url("../fonts/SinkinSans-700Bold-webfont.ttf") format("truetype"),
-    url("../fonts/SinkinSans-700Bold-webfont.svg#sinkin_sans700_bold")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
+@mixin font-face($name, $file, $weight, $style) {
+  @font-face {
+    font-family: "#{$name}";
+    font-style: "#{$style}";
+    font-weight: "#{$weight}";
+    src: url("../fonts/#{$file}.eot");
+    src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/#{$file}.woff") format("woff"),
+      url("../fonts/#{$file}.ttf") format("truetype"),
+      url("../fonts/#{$file}.svg?#webfont") format("svg"),
+      url("../fonts/#{$file}.otf") format("opentype");
+    font-display: swap;
+  }
 }
 
+@include font-face(
+  "MuseoSans Condensed",
+  museo-sans-condensed-700-webfont,
+  "normal",
+  "normal"
+);
+@include font-face("MuseoSans-100", MuseoSans-100, "100", "normal");
+@include font-face("MuseoSans-500", MuseoSans-500, "500", "normal");
+@include font-face("MuseoSans-700", MuseoSans-700, "700", "normal");
+@include font-face("MuseoSans-900", MuseoSans-900, "900", "normal");
+@include font-face("MuseoSansCyrl", MuseoSansCyrl, "normal", "normal");
+@include font-face("MuseoSansCyrl", MuseoSansCyrl_0 3, "normal", "normal");
+@include font-face("museosans-500italic", museosans-500italic, "500", "italic");
+
 body {
-  font-family: "sinkin_sans300_light";
+  font-family: "MuseoSans-500";
   font-size: 1.4em;
   line-height: 1.5em;
   overflow-x: hidden;
@@ -145,7 +77,7 @@ section {
 }
 
 h2 {
-  font-family: "sinkin_sans600_semibold";
+  font-family: "MuseoSans-700";
   font-size: 27px;
   margin-top: 0;
   margin-bottom: 40px;
@@ -155,18 +87,16 @@ h2 {
 }
 
 h3 {
-  font-family: "sinkin_sans600_semibold";
+  font-family: "MuseoSans-700";
 }
 
 h4 {
-  font-family: "sinkin_sans400_regular";
   font-size: 17px;
   letter-spacing: -1px;
   margin-bottom: 5px;
 }
 
 .lead {
-  font-family: "sinkin_sans400_regular";
   font-size: 17px;
   letter-spacing: 1px;
 }
@@ -191,7 +121,7 @@ h4 {
 }
 
 .navbar-custom {
-  font-family: "sinkin_sans700_bold";
+  font-family: "MuseoSans-900";
   font-size: 12px;
   border-radius: 0;
   margin-bottom: 0;
@@ -274,7 +204,7 @@ h4 {
 }
 
 #countdown .countdown_section {
-  font-family: "sinkin_sans200_x_light";
+  font-family: "MuseoSans-300";
   font-size: 10px;
 }
 
@@ -315,14 +245,14 @@ h4 {
 }
 
 .fact .timer {
-  font-family: "sinkin_sans200_x_light";
+  font-family: "MuseoSans-300";
   font-size: 55px;
   line-height: 55px;
 }
 
 .fact p {
   font-size: 13px;
-  font-family: "sinkin_sans700_bold";
+  font-family: "MuseoSans-900";
   letter-spacing: 1px;
 }
 
@@ -526,7 +456,7 @@ h4 {
 }
 
 .event .name {
-  font-family: "sinkin_sans600_semibold";
+  font-family: "MuseoSans-700";
   font-size: 14px;
 }
 
@@ -546,7 +476,7 @@ h4 {
 
 #days .item h4,
 #days .item h5 {
-  font-family: "sinkin_sans600_semibold";
+  font-family: "MuseoSans-700";
   margin-bottom: 10px;
   text-align: center;
   cursor: pointer;
@@ -581,7 +511,7 @@ h4 {
 }
 
 #venue h4 {
-  font-family: "sinkin_sans600_semibold";
+  font-family: "MuseoSans-700";
   margin-bottom: 15px;
 }
 
@@ -629,7 +559,7 @@ h4 {
 }
 
 #testimonial h4 {
-  font-family: "sinkin_sans700_bold";
+  font-family: "MuseoSans-900";
   letter-spacing: 1px;
   margin: 0;
 }
@@ -654,7 +584,7 @@ h4 {
   justify-content: space-around;
   align-items: center;
   color: white;
-  font-family: "sinkin_sans700_bold";
+  font-family: "MuseoSans-900";
   text-align: center;
 }
 
@@ -747,7 +677,6 @@ h4 {
 }
 
 .price-table-header .title {
-  font-family: "sinkin_sans400_regular";
   font-size: 22px;
   padding-bottom: 20px;
   line-height: 22px;
@@ -875,7 +804,7 @@ select {
 /* BUTTONS */
 
 .button {
-  font-family: "sinkin_sans700_bold";
+  font-family: "MuseoSans-900";
   font-size: 10px;
   text-transform: uppercase;
   border: none;
@@ -1040,7 +969,7 @@ select {
   }
 }
 #dialog-content {
-  font-family: "sinkin_sans600_semibold";
+  font-family: "MuseoSans-700";
   padding: 0;
 }
 #dialog-content #subscribe {
@@ -1063,7 +992,7 @@ select {
   padding: 8px;
   border-radius: 25px;
   font-weight: bold;
-  font-family: "sinkin_sans600_semibold";
+  font-family: "MuseoSans-700";
 }
 
 .buttons {
@@ -1108,7 +1037,7 @@ select {
   color: #262b44;
   font-size: 60px;
   line-height: 59px;
-  font-family: "sinkin_sans600_semibold";
+  font-family: "MuseoSans-700";
   font-weight: bold;
   margin-bottom: 40px;
 }
@@ -1301,7 +1230,6 @@ header {
         }
       }
       p {
-        font-family: "TangoSans";
         font-size: 15px;
         max-width: 72px;
         text-align: center;
@@ -1335,12 +1263,11 @@ header {
       z-index: 2;
       h1 {
         color: #fff;
-        font-family: "TangoSans";
+
         font-size: 75px;
         line-height: 62px;
       }
       p {
-        font-family: "TangoSans";
         font-size: 15px;
         line-height: 15px;
         margin-bottom: 22px;
@@ -1538,6 +1465,30 @@ section.banner2 {
       }
     }
   }
+  .novedades {
+    max-width: 1200px;
+    margin: 0 auto;
+    p {
+      margin-bottom: 20px;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      @media only screen and (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      li {
+        p {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+        strong {
+          font-family: "MuseoSans-900";
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1631,4 +1582,183 @@ section.banner2 {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 15px;
+}
+
+.agenda {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .que_es,
+  .porque,
+  .debesestar,
+  .fechas,
+  .agendaacademica {
+    margin: 30px auto;
+    p,
+    strong,
+    li {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 15px;
+      @media only screen and (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+  .agendaacademica {
+    .container {
+      margin: 50px auto;
+    }
+  }
+  h3 {
+    color: #e95b0c;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "Museosans-900";
+  }
+  &-banner {
+    height: 50vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    @media only screen and (max-width: 768px) {
+      padding: 20px;
+    }
+    img {
+      width: 100%;
+      max-width: 520px;
+    }
+  }
+  .icon {
+    width: 100%;
+    max-width: 320px;
+    display: block;
+    margin: 0 0 0 auto;
+  }
+  .copy {
+    background-image: url(../rvmbo/img/copy.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    min-height: 8vw;
+    margin-bottom: 50px;
+    justify-content: center;
+    h1 {
+      font-size: 31px;
+      color: #fff;
+      @media only screen and (max-width: 768px) {
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+  .intro {
+    font-size: 35px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 25px;
+    max-width: 680px;
+    width: 100%;
+  }
+  h2 {
+    background-image: url(../rvmbo/img/naranja.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #fff;
+    max-width: 840px;
+    width: 100%;
+    text-align: right;
+    background-position-x: 160px;
+    padding-right: 70px;
+    margin: 0 auto 30px 0;
+  }
+  img {
+    width: 100%;
+  }
+  .entidades,
+  .porque,
+  .fechas {
+    h2 {
+      background-image: url(../rvmbo/img/azul.png);
+      text-align: left;
+      padding-left: 70px;
+      margin: 0 0 30px auto;
+      background-position-x: 0;
+    }
+  }
+  .fechas {
+    img {
+      max-width: 420px;
+      width: 100%;
+      margin: 50px auto;
+      display: block;
+    }
+    a {
+      img {
+        max-width: 280px;
+        width: 100%;
+      }
+    }
+  }
+  .entidades {
+    strong {
+      max-width: 1200px;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  footer.container {
+    display: flex;
+    padding: 50px 20px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    img {
+      width: 170px;
+      object-fit: contain;
+    }
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.link.disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+img.flag {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto 30px 0;
+  display: block;
+}
+.porque,
+.fechas {
+  img.flag {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px 0 30px auto;
+    display: block;
+  }
 }
